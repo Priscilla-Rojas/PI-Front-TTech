@@ -52,21 +52,6 @@ function addProducts(productItem) {
     updateproductsQuantity();
 }
 
-function updateproductsQuantity() {
-    const productsContainer = document.querySelector('.products-container');
-
-    const products = JSON.parse(localStorage.getItem('products')) || [];
-
-    if (products.length) {
-        const quantityContainer = document.createElement('span');
-        quantityContainer.id = 'products-count';
-        quantityContainer.innerText = products.length;
-        productsContainer.appendChild(quantityContainer);
-    }
-}
-
-
-/* ------------------------- Susbcripcion a eventos ------------------------- */
 function productCardEventSuscribe(productCard) {
     const quantity = productCard.querySelector('.products-options-container input');
 

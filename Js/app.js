@@ -32,3 +32,19 @@ addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+function updateproductsQuantity() {
+    const productsContainer = document.querySelector('.products-container');
+
+    const products = JSON.parse(localStorage.getItem('products')) || [];
+    console.log(products.length);
+    if (products.length) {
+        const quantityContainer = document.createElement('span');
+        quantityContainer.id = 'products-count';
+        quantityContainer.innerText = products.length;
+        productsContainer.appendChild(quantityContainer);
+    }
+}
+
+updateproductsQuantity()
