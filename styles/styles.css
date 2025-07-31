@@ -62,9 +62,6 @@
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* VIDEOS Y TEXTO */
-
-
 .section-divider {
   margin: 2rem auto;
   width: 60%;
@@ -96,12 +93,15 @@ p {
 /* CARDS - RESEÑAS */
 .container-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   padding: 2rem 0;
 }
 
 .cards {
+
+  max-width: 380px;
+  margin: 0 auto;
   background-color: #fff;
   padding: 2rem;
   border-radius: 15px;
@@ -143,3 +143,21 @@ p {
 }
 
 
+@media (max-width: 480px) {
+  .cards {
+    padding: 1.5rem;
+  }
+
+  .cards .quotes,
+  .cards .closing-quotes {
+    width: 25px;
+  }
+
+  .cards .name {
+    font-size: 1rem;
+  }
+
+  .cards p {
+    font-size: 0.9rem;
+  }
+}
