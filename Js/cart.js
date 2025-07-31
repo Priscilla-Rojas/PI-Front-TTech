@@ -143,7 +143,7 @@ function actionsQuantityEventSubscribe() {
         });
 
         removeBtn.addEventListener('click', () => {
-            confirm('¿Estás seguro de que quieres eliminar este producto?') &&   updateQuantity(productId, -9999); // eliminamos el producto directamente
+            updateQuantity(productId, -9999);
         });
     });
     updateproductsQuantity();
