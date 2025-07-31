@@ -35,6 +35,11 @@ addEventListener('DOMContentLoaded', () => {
 
 
 function updateproductsQuantity() {
+    const quantityContainer = document.getElementById('products-count');
+    if (quantityContainer) {
+        quantityContainer.remove();
+    }
+    
     const productsContainer = document.querySelector('.products-container');
 
     const products = JSON.parse(localStorage.getItem('products')) || [];
