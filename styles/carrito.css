@@ -138,7 +138,7 @@
 /* ------------------- RESPONSIVE ------------------- */
 @media (max-width: 768px) {
   .products-item-container {
-    grid-template-columns: 60px 1fr 80px 40px;
+    grid-template-columns: 60px 1fr 100px 50px;
     grid-template-rows: auto auto;
     padding: 1rem;
   }
