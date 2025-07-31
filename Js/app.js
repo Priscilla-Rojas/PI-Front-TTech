@@ -1,4 +1,3 @@
-
 const burgerBtn = document.getElementById('burger-btn');
 const navMenu = document.getElementById('nav-menu');
 
@@ -18,6 +17,18 @@ function updateKartQuantity() {
         kartContainer.appendChild(quantityContainer);
     }
 }
+
+let scrollTimeout;
+
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header-container');
+    header.classList.add('header-scrolled');
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+        header.classList.remove('header-scrolled');
+    }, 300);
+});
+
 
 addEventListener('DOMContentLoaded', () => {
     updateKartQuantity();
@@ -39,7 +50,7 @@ function updateproductsQuantity() {
     if (quantityContainer) {
         quantityContainer.remove();
     }
-    
+
     const productsContainer = document.querySelector('.products-container');
 
     const products = JSON.parse(localStorage.getItem('products')) || [];
