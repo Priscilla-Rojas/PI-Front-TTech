@@ -21,18 +21,18 @@ function prevSlide() {
   showSlide(currentIndex);
 }
 
-nextBtn.addEventListener('click', () => {
-  nextSlide();
-  resetAutoplay();
-});
+// nextBtn.addEventListener('click', () => {
+//   nextSlide();
+//   resetAutoplay();
+// });
 
-prevBtn.addEventListener('click', () => {
-  prevSlide();
-  resetAutoplay();
-});
+// prevBtn.addEventListener('click', () => {
+//   prevSlide();
+//   resetAutoplay();
+// });
 
 function startAutoplay() {
-  autoSlide = setInterval(nextSlide, 5000);
+  autoSlide = setInterval(nextSlide, 3000);
 }
 
 function resetAutoplay() {
