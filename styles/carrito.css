@@ -1,0 +1,142 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* ------------------- MAIN ------------------- */
+#products-main {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#products-main h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-divider {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  margin-bottom: 2rem;
+}
+
+/* ------------------- CARRITO ITEMS ------------------- */
+.products-data-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.products-item-container {
+  display: grid;
+  grid-template-columns: 80px 1fr 100px 100px 100px;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  gap: 1rem;
+}
+
+.products-item-img-container img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.products-item-description span {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.products-item-price span,
+.products-item-quantity span,
+.products-item-subtotal span {
+  font-weight: bold;
+  font-size: 1rem;
+  display: block;
+  text-align: center;
+}
+
+/* ------------------- BOTONES DE ACCIÓN ------------------- */
+.products-btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.products-btn-container button {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.products-btn-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+@media (max-width: 768px) {
+  .products-item-container {
+    grid-template-columns: 60px 1fr 80px;
+    grid-template-rows: auto auto;
+    padding: 1rem;
+  }
+
+  .products-item-price,
+  .products-item-quantity,
+  .products-item-subtotal {
+    font-size: 0.9rem;
+  }
+
+  .products-item-price {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: left;
+  }
+
+  .products-item-quantity {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .products-item-subtotal {
+    grid-column: 3;
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  #products-main h1 {
+    font-size: 2rem;
+  }
+
+  .products-btn-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .products-btn-container button {
+    width: 80%;
+  }
+}

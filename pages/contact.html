@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="../styles/styles.css"> -->
+  <link rel="stylesheet" href="../styles/contacto.css">
+  <link rel="stylesheet" href="../styles/headerFooter.css">
+  <link rel="shortcut icon" href="../assets/icons/logo.png" type="image/x-icon">
+  <title>GlowSkin</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <!-- Logo de la tienda -->
+      <div class="logo-container">
+        <a href="../index.html">
+          <img src="../assets/icons/logo.png" alt="GlowSkin Logo">
+        </a>
+      </div>
+      <!-- Barra de navegación -->
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../pages/products.html">Productos</a></li>
+          <li><a href="../pages/contact.html">Contacto</a></li>
+          <li id="cart-link"><a href="../pages/carrito.html">Carrito</a></li>
+        </ul>
+      </nav>
+      <!-- Contenedor auxiliar -->
+      <div class="header-aux-container">
+        <!-- Carrito -->
+        <div class="products-container">
+          <a href="../pages/carrito.html">
+            <img src="../assets/icons/carrito.png" alt="Carrito">
+          </a>
+        </div>
+        <!-- Botón hamburguesa -->
+        <button class="burger-btn" id="burger-btn">&#9776;</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="home-main-container">
+      <h1>Formulario de contacto</h1>
+      <hr class="section-divider">
+      <form 
+        action="https://formspree.io/f/xnnpekpw"
+        method="POST"
+      >
+        <div>
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" placeholder="Ingrese su nombre">
+        </div>
+        <div>
+          <label for="mail">Correo Electronico:</label>
+          <input type="email" name="email" id="mail" placeholder="Ingrese su correo electronico">
+        </div>
+        <div>
+          <label for="msj">Mensaje:</label>
+          <textarea name="message" id="msj" rows="4" placeholder="Ingrese su mensaje" required></textarea>
+        </div>
+        <input type="submit" value="Enviar">
+      </form>
+    </div>
+    
+  </main>
+  <footer>
+    <ul>
+      <li><a href="#" target="_blank"><img src="../assets/icons/instagram.png" alt="Instagram"></a></li>
+      <li><a href="#" target="_blank"><img src="../assets/icons/github.png" alt="Github"></a></li>
+      <li><a href="#" target="_blank"><img src="../assets/icons/linkedin.png" alt="Linkedin"></a></li>
+      <li><a href="#" target="_blank"><img src="../assets/icons/facebook.png" alt="Facebook"></a></li>
+    </ul>
+    <p>Derechos Reservados © 2025 - GlowSkin Cuidado de la Piel.</p>
+  </footer>
+
+  <script src="../Js/app.js"></script>
+</body>
+</html>
